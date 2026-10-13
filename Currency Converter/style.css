@@ -27,7 +27,6 @@ form {
 form select, button, input {
     width: 100%;
     border: none;
-    outline: none ;
     border-radius: 0.75rem;
 
 }
@@ -83,4 +82,19 @@ form button {
     font-size: 1.15rem;
     cursor: pointer;
 
+}
+
+form :focus-visible {
+    outline: 3px solid #1d4ed8;
+    outline-offset: 3px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 0.25rem;
+}
+
+form button:disabled {
+    cursor: wait;
+    opacity: 0.7;
 }
