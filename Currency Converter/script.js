@@ -113,9 +113,9 @@ const updateFlag = (element) => {
 }
 
 
-btn.addEventListener("click", async (evt) => {
+form.addEventListener("submit", (evt) => {
     evt.preventDefault();
-    UpdateExchangeRate(evt)
+    UpdateExchangeRate();
     
 })
 
