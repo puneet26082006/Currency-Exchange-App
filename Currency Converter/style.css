@@ -51,7 +51,12 @@ form input {
 
 .dropdown i {
     font-size: 1.5rem ;
-    margin-top: 1rem ;
+}
+
+#swap-currencies {
+    flex: 0 0 3rem;
+    width: 3rem;
+    margin-top: 1rem;
 }
 
 .select-container img {
