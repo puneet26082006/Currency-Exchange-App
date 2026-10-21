@@ -1,6 +1,6 @@
 const BASE_URL = "https://api.frankfurter.dev/v1/latest";
 const dropdown = document.querySelectorAll(".dropdown select");
-const btn = document.querySelector("form button");
+const btn = document.querySelector('form button[type="submit"]');
 const form = document.querySelector("form");
 const amountInput = document.querySelector(".amount input");
 let conversionRequestId = 0;
@@ -112,6 +112,13 @@ const updateFlag = (element) => {
     img.src = newSrc;
 }
 
+document.querySelector("#swap-currencies").addEventListener("click", () => {
+    [fromCurr.value, toCurr.value] = [toCurr.value, fromCurr.value];
+    updateFlag(fromCurr);
+    updateFlag(toCurr);
+    invalidateConversion();
+    UpdateExchangeRate();
+});
 
 form.addEventListener("submit", (evt) => {
     evt.preventDefault();
